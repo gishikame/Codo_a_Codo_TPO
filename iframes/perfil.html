@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Datos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h2>Mis Datos</h2>
+    <label for="Nombre">Nombre: </label>
+    <input name="Nombre" type="text" placeholder="Ingrese su nombre" required/> 
+    <label for="Apellido">Apellido: </label><input name="Apellido" type="text" placeholder="Ingrese su apellido" required />
+    <br>
+    <label>Teléfono de contacto: </label><input name="Tel" type="tel" placeholder="Ingrese su teléfono" required />
+    <label>E-mail: </label><input name="mail" type="email" placeholder="Ingrese su mail de contacto" size="24" required>
+    <br>
+    <label for="Localidad">Localidad: </label>
+    <input name="Localidad" type="text" placeholder="Ingrese su ciudad"/>
+    <label for="CP">Código Postal: </label>
+    <input name="CP" type="number" min="0" placeholder="Ingrese el número postal"/>
+    <label for="Provincia">Provincia: </label>
+    <select name="Provincia">
+        <option value="CABA">Ciudad Autónoma de Buenos Aires</option>
+        <option value="CABA">Buenos Aires</option>
+        <option value="CABA">Chaco</option>
+        <option value="CABA">Córdoba</option>
+
+    </select>
+     <br>    
+    <input type="submit" value="Guardar" />
+    <input type="submit" value="Cancelar" />
+
+
+</body>
+</html>

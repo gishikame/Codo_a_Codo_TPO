@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{font-family: 'Open Sans';}
+
+body{
+    line-height:2;}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+      
+th {background-color: rgba(112, 184, 189,0.6);
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+
+td {padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+    
+      
+tr:hover {background-color: rgba(112, 184, 189,0.4);}
+
+.boton{padding: 10px;
+    background-color:  rgba(112, 184, 189,1);
+    text-decoration: none;
+    color: white;
+    }
