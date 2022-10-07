@@ -35,8 +35,7 @@ Barra de navegador con opciones Planes, Información,
 Afiliados y Contacto. Cada uno contiene un submenú
 
 */
-header{background-color: #c4dfe2;
-  
+header{background-color: #c4dfe2;  
     height: 160px;
 }
 
@@ -44,20 +43,19 @@ header{background-color: #c4dfe2;
 .inline {display: inline-block;
 }
 
-
 /*Logo con entrada animada*/
 header .logo {
             float:left;
-            width: 12%;
+            width: 160px;
             animation: bounceIn;
-            animation-duration: 2s;                           
+            animation-duration: 3s;                           
 }
 
 /* Menú navegador que empieza a la izquierda del logo*/
 header nav{
     /*height: 180px;*/
     background-color: #c4dfe2;
-    margin-left: 180px;
+    margin-left: 220px;
 }
 
 /* Estilo de los elementos del Menú Navegador y Menú vertical*/
@@ -85,7 +83,7 @@ ul {
     display: inline-block;
   }
   
- .menu-content, .menu2-content, .menu3-content, .menu4-content {
+ .menu-content, .menu2-content, .menu3-content, .menu4-content{
     display: none;
     position: absolute;
     background-color: rgba(112, 184, 189,0.4);
@@ -94,7 +92,7 @@ ul {
     z-index: 1;
   }
   
-  .menu-content a,  .menu2-content a,  .menu3-content a, .menu4-content a, .showSingle {
+  .menu-content a,  .menu2-content a,  .menu3-content a, .menu4-content a, .me {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -109,16 +107,15 @@ ul {
     display: block;
   }
 
-/*
+.user{ display: flex;
+  justify-content:flex-end;
+}
 
 /* Login*/
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   border: none;
   cursor: pointer;
-  position: fixed;
-  top: 50px;
-  right: 8px;
   width: 120px;
  }
 
@@ -190,14 +187,9 @@ box-sizing: border-box;}
   opacity: 1;}
 
 /*
-
-
-
-  /*
 ESTILO DEL MAIN
 Colores a utilizar
 #f5f8f7
-
 */
 
 /* Crear 2 columnas de anchos diferentes */
@@ -242,6 +234,7 @@ main ul{
         flex-direction: column;
         justify-content: flex-end;
 }
+.item{ display: none;}
 
   /*
 ESTILO DEL FOOTER
@@ -256,20 +249,180 @@ footer{
 
 
 
+
+
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
+  header{background-color: #c4dfe2;  
+      height: 160px;
   }
+  
+  /*Defino elementos como imágenes en bloque*/
+  .inline {display: inline-block;
+  }
+
+  /*Logo con entrada animada*/
+  .business{ display: flex;
+              justify-content:center;
+              width: 100%;
+              animation: bounceIn;
+              animation-duration: 3s;                           
+  }
+
+  header nav{
+    background-color: rgba(112, 184, 189,0.4);
+    margin-left: 0px;
+}
+/* Estilo de los elementos del Menú Navegador y Menú vertical*/
+ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(112, 184, 189,0.4);
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
+.dropbtn {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
+.menu:hover .dropbtn {
+  background-color: white;
+}
+
+li.menu, li.menu2, li.menu3, li.menu4 {
+  display: inline-block;
+  
+}
+
+.menu-content, .menu2-content, .menu3-content, .menu4-content, .hide, .user, .info_btn
+{
+  visibility: hidden;
+}
+
+/* Login*/
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+border: none;
+cursor: pointer;
+width: 120px;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+font-size: small;
+color: black;
+display: none;
+position: fixed;
+top: 170px;
+right: 8px;
+width: 100%;
+height: 100px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+padding: 10px;
+background-color: rgb(255, 255, 255);
+border-radius: 5px;
+}
+
+.form-container label{
+font-weight: bold;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+width: 90%;
+padding: 10px;
+margin: 0px;
+border: none;
+background: #f1f1f1;
+border-radius: 5px;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+box-sizing: border-box;
+background-color:  rgb(5, 173, 185);
+color: white;
+padding: 10px 10px;
+border: none;
+cursor: pointer;
+width: 45%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+background-color: #ff8725;
+}
+
+.btn , .btn cancel {display: inline-block;
+box-sizing: border-box;}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;}
+
+/*
+ESTILO DEL MAIN
+Colores a utilizar
+#f5f8f7
+*/
+
+/* Crear 2 columnas de anchos diferentes */
+/* Columna izquierda */
+.leftcolumn {   
+float: left;
+width: 100%;
+}
+
+/* Columna derecha */
+.rightcolumn {
+float: left;
+width: 100%;
+background-color: #f5f8f7;
+padding-left: 20px;
+}
+/* Limpiar espacios despues de cada columna */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+main{
+/*width: 100%;*/
+background-image: url("./images/fondo.PNG");
+background-repeat: repeat;
+}
+.box{
+margin-top: 20px;
+}
+
+.user_menu a{
+  text-align: center;
+}
+
+iframe{
+  width: 100%;
+}
+
+}
 
