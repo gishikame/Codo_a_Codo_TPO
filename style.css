@@ -208,6 +208,31 @@ Colores a utilizar
   background-color: #f5f8f7;
   padding-left: 20px;
 }
+
+/* columnas del home */
+/* Columna izquierda */
+.coli {   
+  float: left;
+  width: 80%;
+  background-image: url("./images/fondo.PNG");
+  background-repeat: repeat;
+}
+
+/* Columna derecha Anuncios */
+.cold {
+  float: left;
+  width: 18%;
+  background-image: url("./images/fondo.PNG");
+  padding-left: 20px;
+}
+
+.adds {
+  padding-top: 15%;
+  
+}
+
+
+
 /* Limpiar espacios despues de cada columna */
 .row:after {
   content: "";
