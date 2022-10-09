@@ -5,32 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./images/icono.PNG" type="image/x-icon">
-
-   <script>
-    function openForm() {
-          document.getElementById("myForm").style.display = "block";
-        }
-        
-    function closeForm() {
-          document.getElementById("myForm").style.display = "none";
-        }
-
-    function toggle_visibility(id) {
-     var e = document.getElementById(id);
-     if (e.style.display == 'block') {
-    e.style.display = 'none'
-     } else {
-    document.querySelectorAll('.item').forEach(function(div) {
-       div.style.display = 'none';
-    })
-    e.style.display = 'block';
-    }
-    }
-              
-    </script> 
-    
-    <title>HGG- Afiliados</title>
+    <link rel="shortcut icon" href="./images/icono.PNG" type="image/x-icon">   
+    <title>HGG- Afiliados</title> <!-- Solapa desarrollada por Gabriela-->
 </head>
 
 <body>
@@ -58,12 +34,7 @@
                 </li>
 
                 <li class="menu3">
-                <a href="#" class="dropbtn">Afiliados <img src="./images/lock.PNG" alt="block" width="15px" class="inline"></a> 
-                <div class="menu3-content">
-                    <a href="#">Turnos</a>
-                    <a href="#">Estudios Médicos</a>
-                </div>
-                           
+                <a href="javascript:void(0)" class="dropbtn" onclick="openForm()">Afiliados <img src="./images/lock.PNG" alt="block" width="15px" class="inline"></a>          
                 </li>
                                 
                 <li class="menu4">
@@ -74,7 +45,7 @@
                 </div>
                 </li>
             </ul>
-
+<!-- Queda afuera en esta solapa porque ya debería haberse loggeado el usuario para ver esta página          
             <div class="user">
                  <img src="./images/Capture.PNG" alt="usuario" width="90px" class="open-button" onclick="openForm()">
             </div>
@@ -94,6 +65,7 @@
 
                     </form>
             </div>
+-->
         </nav>
     </header>
     
@@ -103,24 +75,24 @@
                 <div class="box">
                     <div class="hide">Servicios Médicos<br>
                     <input type="search" name="search" id="buscar" placeholder="Buscar..." size="10">
-                    <input type="submit" value="Buscar"><br>
+                    <input type="submit" value="Buscar"><br><br>
                     </div>
 
                         <ul class="center">
                             <li class="user_menu" >
-                                <a href=# onclick=toggle_visibility('datos') class="me"> Mis datos</a>
+                                <a href=# onclick="toggle_visibility('datos')" class="me"> Mis datos</a>
                             </li>
 
                             <li class="user_menu">
-                                <a a href=# onclick=toggle_visibility('turnos') class="me">Turnos</a>
+                                <a a href=# onclick="toggle_visibility('turnos')" class="me">Turnos</a>
                             </li>
 
                             <li class="user_menu">
-                                <a href=# onclick=toggle_visibility('estudios') class="me">Estudios Médicos</a>
+                                <a href=# onclick="toggle_visibility('estudios')" class="me">Estudios Médicos</a>
                             </li>
 
                             <li class="user_menu">
-                                <a href=# onclick=toggle_visibility('cartilla') class="me">Cartilla</a>
+                                <a href=# onclick="toggle_visibility('cartilla')" class="me">Cartilla</a>
                             </li>
                         </ul>
 
@@ -141,13 +113,13 @@
                  
             <div class="rightcolumn">
             
-                <iframe src="./iframes/perfil.html" seamless width= "800px" height="500px" id="datos" class="item"></iframe>
+                <iframe src="./iframes/perfil.html" id="datos"class="item"></iframe>
                 
-                <iframe src="./iframes/turnos.html" seamless width= "800px" height="500px" id="turnos" class="item"></iframe>
+                <iframe src="./iframes/turnos.html" seamless id="turnos" class="item"></iframe>
 
-                <iframe src="./iframes/estudios.html" seamless width= "800px" height="500px" id="estudios" class="item"></iframe>
+                <iframe src="./iframes/estudios.html" seamless id="estudios" class="item"></iframe>
 
-                <iframe src="./iframes/cartilla.html" seamless width= "800px" height="500px" id="cartilla" class="item"></iframe>
+                <iframe src="./iframes/cartilla.html" seamless id="cartilla" class="item"></iframe>
                                                            
             </div>
         </div>
@@ -161,5 +133,7 @@
             Copyright 2022 - Toda la información publicada en este sitio es ilustrativa y puede variar sin previo aviso.
         </p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
