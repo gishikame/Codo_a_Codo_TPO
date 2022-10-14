@@ -6,50 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Datos</title>
     <link rel="stylesheet" href="estilo.css">
+    
 </head>
 <body>
-    <h2>Mis Datos</h2>
-    <div id="datos">
-       <!-- Acá uso JS para mostrar informacion -->
-       
-    <form role="form">
-        <fieldset id="personal-information" name="personal-information">
-          <legend>Personal Information</legend>
-    
-          <section class="usernameSection" name="first-name">
-            <label for="username">username:*</label>
-            <input
-              id="username"
-              type="text"
-              name="textfield"
-              placeholder="username"
-            />
-          </section>
-          <br />
-          <section class="passwordSection" name="passwordSection">
-            <label for="password">password:*</label>
-            <input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="password"
-            />
-          </section>
-          <section class="submit" name="sumbit">
-            <button id="submitButton" type='button' name="submit button">Sign in</button>
-          </section>
-        </fieldset>
-      </form>
-
-    
-    </div>
-    <div>    
-        <input type="submit" value="Modificar datos" onclick="modify()"/>
-        <input type="submit" value="Guardar" onclick="save()"/>
-        <input type="submit" value="Cancelar" onclick="cancel()"/>
-    </div>
-    
-
+  <form>
+    <h2>Datos del Afiliado Titular</h2>
+      <div id="app"><!--Acá uso Vue para mostrar informacion -->
+        <div class="row">
+            <div class="leftcolumn">
+              <div id="datos">
+                <label for="Nombre">Nombre: </label>
+                <p class="no_edit"> {{info.firstName}}</p> 
+                <label for="Apellido">Apellido: </label><p class="no_edit">{{info.lastName}}</p><br>
+                <label>Teléfono de contacto: </label><p class="no_edit"> {{info.phone}}</p>
+                <label>E-mail: </label><p class="no_edit">{{info.email}}</p><br>
+                <label for="Localidad">Localidad: </label ><p class="no_edit"> {{info.address.city}}</p>
+                <label for="CP">Código Postal: </label><p class="no_edit"> {{info.address.postalCode}}</p>
+                <label for="Provincia">Provincia: </label><p class="no_edit"> {{info.address.state}}</p>
+              </div>
+            </div>
+        
+            <div class="rightcolumn">
+              <img class="tarjetaPerfil" :src="info.image" :alt="info.lastName">
+            </div>
+        </div>
+      </div>
+      <input type="button" value="Modificar" onclick="modify()">
+      <input type="button" value="Guardar" onclick="save()">
+     
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

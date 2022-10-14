@@ -1,4 +1,22 @@
 /* Este es el JS para la página de Servicios de Salud*/
+//Llamo a Vue para mostrar la solapa de Afiliados si el login es verdadero
+const app = new Vue ({
+  el: '#app',
+  data:{
+    info:{}
+  },
+  created(){
+      fetch('https://dummyjson.com/users')
+        .then(response => response.json())
+        .then(data => {
+          this.info=data.users[0]; //Agarro sólo un usuario
+          console.log(this.info)
+        })
+        .catch(error=> console.log(error));
+
+  },
+});
+
 //Para abrir y cerrar el formulario del login, están las funciones openForm y closeForm
 function openForm() {
     document.getElementById("myForm").style.display = "block";
@@ -20,12 +38,4 @@ document.querySelectorAll('.item').forEach(function(div) {
 e.style.display = 'block';
 }
 }
-/*
-// Selecciono los iframes (clase item) y ajusto alto y ancho
-let frame = document.getElementsByClassName('item');
-frame.onload = function() // funcion que se ejecuta en la carga del iframe
-{ // setear la altura 
-  console.log(frame.contentWindow.document.body.scrollHeight)
-  frame.style.height=frame.contentWindow.document.body.scrollHeight + 'px';
-  }
-*/
+

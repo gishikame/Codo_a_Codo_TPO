@@ -1,32 +1,25 @@
-//Levantar el JSON
-/*fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => console.log(json))
+//Llamo a Vue para mostrar los datos del Afiliado
+const app = new Vue ({
+  el: '#app',
+  data:{
+    info:{}
+  },
+  created(){
+      fetch('https://dummyjson.com/users')
+        .then(response => response.json())
+        .then(data => {
+          this.info=data.users[0]; //Agarro sólo un usuario
+          console.log(this.info)
+        })
+        .catch(error=> console.log(error));
 
-      console.log(data.id[0])
-      datos=data.id[0] //.id Propiendad que quiero levantar del JSON
-*/
-const myJSON = '{"name":"John", "surname":"Jones", "age":31, "city":"New York", "zipcode": 8988, "address":"78 Lincoln st", "phone":5666222, "email":"jonhy@mail.com"}';
-const data = JSON.parse(myJSON);
-let cad= ``
-//for (info of data){
-cad+=`<label for="Nombre">Nombre: </label>
-<p class="no_edit"> ${data.name}</p> 
-<label for="Apellido">Apellido: </label><p class="no_edit">${data.surname}</p><br>
-<label>Teléfono de contacto: </label><p class="no_edit"> ${data.phone}</p>
-<label>E-mail: </label><p class="no_edit">${data.email}</p><br>
-<label for="Localidad">Localidad: </label ><p class="no_edit"> ${data.city}</p>
-<label for="CP">Código Postal: </label><p class="no_edit"> ${data.zipcode}</p>
-<label for="Provincia">Provincia: </label><p class="no_edit"> ${data.city}</p>
-</div>
-`
-//}
-document.getElementById("datos").innerHTML=cad;
+  },
+});
 
 //Modificar los datos
 function modify(){
     let cad= ``
-      //for (info of datos){
+      
         cad+=`<label for="Nombre">Nombre: </label>
         <input name="nombre" id="nombre" type="text" placeholder="Ingrese nombre" required/> 
         <label for="Apellido">Apellido: </label><input name="nombre" id="apellido" type="text" placeholder="Ingrese su apellido" required />
@@ -44,21 +37,6 @@ function modify(){
         `
     document.getElementById("datos").innerHTML=cad;    
 }
-    
-
-
-/*function signIn(userName, password) {
-    console.log(userName,password)
-  }
-  
-  const currentUsername = document.getElementById("username");
-  const currentPassword = document.getElementById("password");
-  const submitButton = document.getElementById("submitButton");
-  
-  submitButton.addEventListener("click", () => {
-    signIn(currentUsername.value, currentPassword.value);
-  });
-*/
 
 //Guardar los cambios hechos
 function save() {
@@ -84,24 +62,21 @@ function save() {
     document.getElementById("datos").innerHTML=cad  
 }
 
-//Cancelar los cambios
-function cancel() {
-    const myJSON = '{"name":"John", "surname":"Jones", "age":31, "city":"New York", "zipcode": 8988, "address":"78 Lincoln st", "phone":5666222, "email":"jonhy@mail.com"}';
-    const datos = JSON.parse(myJSON);
-    let cad= ``
-      cad+=`<label for="Nombre">Nombre: </label>
-      <p class="no_edit"> ${datos.name}</p> 
-      <label for="Apellido">Apellido: </label><p class="no_edit">${datos.surname}</p><br>
-      <label>Teléfono de contacto: </label><p class="no_edit"> ${datos.phone}</p>
-      <label>E-mail: </label><p class="no_edit">${datos.email}</p><br>
-      <label for="Localidad">Localidad: </label ><p class="no_edit"> ${datos.city}</p>
-      <label for="CP">Código Postal: </label><p class="no_edit"> ${datos.zipcode}</p>
-      <label for="Provincia">Provincia: </label><p class="no_edit"> ${datos.city}</p>
-      </div>
-      `
-   document.getElementById("datos").innerHTML=cad
-        
-  }
-
-  
-
+/*Quise usar el v-model pero no me anduvo
+  <div> <img :src="person.image" :alt="person.firstName"></div>
+        <label for="nombre">Nombre: </label>
+        <input name="nombre" id="nombre" type="text" v-model="name" required> 
+        <label for="Apellido">Apellido: </label>
+        <input name="nombre" id="apellido" type="text" v-model="surname" required>
+        <br>
+        <label>Teléfono de contacto: </label><input name="tel" id="tel" type="tel" v-model="phone" required>
+        <label>E-mail: </label><input name="email" id="mail" type="email" v-model="email" size="24" required>
+        <br>
+        <label for="Localidad">Localidad: </label>
+        <input name="localidad" type="text" id="localidad" v-model="city">
+        <label for="CP">Código Postal: </label>
+        <input name="CP" type="number" id="CP" v-model="zipcode">
+        <label for="Provincia">Provincia: </label>
+        <input name="provincia" type="text" id="provincia" v-model="state">
+       </div>
+*/
