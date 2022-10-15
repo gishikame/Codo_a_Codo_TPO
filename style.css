@@ -833,3 +833,21 @@ background-color: #3b717d;
 
 
 }
+/* Agregado por Gustavo */
+.alineoplanes{
+  float: none;
+width: 5%;
+background-color: #f5f8f7;
+padding-left: 20px;
+}
+.plan_card_style{
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgba(112, 184, 189,1);
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: white;
+  }
