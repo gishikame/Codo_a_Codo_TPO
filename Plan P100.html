@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/iframes/estilo.css">
+    <link rel="shortcut icon" href="./images/icono.PNG" type="image/x-icon">
+
+    <script>
+    function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+    function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+
+    function toggle_visibility(id) {
+     var e = document.getElementById(id);
+     if (e.style.display == 'block') {
+    e.style.display = 'none'
+     } else {
+    document.querySelectorAll('.item').forEach(function(div) {
+       div.style.display = 'none';
+    })
+    e.style.display = 'block';
+    }
+    }
+              
+    </script> 
+    
+    <title>HGG- Plan P100</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="business">
+            <img src="./images/logo2.png" alt="logo-HGG" class="logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li class="menu">
+                <a href="./Planes.html" class="dropbtn">Planes</a>
+                <div class="menu-content">
+                    <a href="#">Cobertura</a>
+                    <a href="#">Cotización</a>
+                </div>            
+                </li>
+
+                <li class="menu2">
+                <a href="javascript:void(0)" class="dropbtn">Información</a>
+                <div class="menu2-content">
+                    <a href="#">Cartilla</a>
+                    <a href="#">Preguntas Frecuentes</a>
+                </div>            
+                </li>
+
+                <li class="menu3">
+                <a href="#" class="dropbtn">Afiliados <img src="./images/lock.PNG" alt="block" width="15px" class="inline"></a> 
+                <div class="menu3-content">
+                    <a href="#">Turnos</a>
+                    <a href="#">Estudios Médicos</a>
+                </div>
+                           
+                </li>
+                                
+                <li class="menu4">
+                <a href="javascript:void(0)" class="dropbtn">Contacto</a>
+                <div class="menu4-content">
+                    <a href="#">Teléfonos</a>
+                    <a href="#">Sucursales</a>
+                </div>
+                </li>
+            </ul>
+
+            <div class="user">
+                 <img src="./images/Capture.PNG" alt="usuario" width="90px" class="open-button" onclick="openForm()">
+            </div>
+
+            <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                  
+                    <label for="user">Usuario: </label>
+                    <input name="user" type="text" placeholder="Ingrese su usuario" required/> 
+                    <label for="password">Contraseña:</label>
+                    <input name="password" type="password" placeholder="Ingrese su contraseña" required />
+                    <p>¿Olvidó su clave? Haga click <a href="#">aquí</a></p>
+
+                    <input type="submit" class="btn" value="Ingresar">
+                    <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
+                    <input type="button" value="Registrarme">
+
+                    </form>
+            </div>
+        </nav> 
+   </header>
+    
+    <main>
+       <div class="row">
+            <div class="leftcolumn">
+                <div class="box">
+                    <div class="hide">Planes Médicos<br>
+                   <!-- <input type="search" name="search" id="buscar" placeholder="Buscar..." size="10">
+                    <input type="submit" value="Buscar"> --><br>
+                    </div>
+                       <ul class="center">
+                        <li class="user_menu" >
+                            <a href="Plan P100.html"> HGG P100</a>
+                        </li>
+                        <li class="user_menu">
+                            <a a href="Plan P200.html">HGG P200</a>
+                        </li>
+                        <li class="user_menu">
+                            <a href="Plan P300.html">HGG P300</a>
+                        </li>
+                        <li class="user_menu">
+                            <a href="Plan P400.html">HGG P400</a>
+                        </li>
+                      </ul>
+                        
+                    </nav>                  
+                    
+                </div> 
+                
+            <div class="box">
+                <div class="info_btn">
+                    <a href="#" class="fixed"><img src="./images/info.png" alt="teléfonos" width="50px"></a>
+                    <a href="#" class="fixed"><img src="./images/mail.png" alt="contacto" width="50px"></a>
+                    <a href="#" class="fixed"><img src="./images/spot.png" alt="ubicación" width="50px"></a>
+                </div>
+            </div> 
+
+            </div>
+        
+            <div class="rightcolumn">     
+
+                
+            
+              
+    
+    <h2 class="plan_card_style" >HGG P100</h2>
+
+<p>Incluye:</p>
+ <p>  <strong> Emergencias las 24 horas.  </strong></p>
+ <p>Consultas médicas y odontológicas en general.</p>
+ <p>Internación en habitación individual.</p>
+ <p>Descuentos en farmacias adheridas</p>
+ <p>Estudios, prácticas de diagnóstico y tratamientos sin copagos en Centros Propios</p>
+ <p>Tratamientos de Rehabilitación: Kinesiología, Fisioterapia y Fonoaudiología</p>
+ <p>Cobertura médica en todo el país</p>
+                                         
+            </div>
+        </div>
+
+    </main> 
+
+    <footer>
+        <p>
+            Superintendencia de Servicios de Salud - Organo de Control de Obras Sociales y Entidades de Medicina Prepaga <br>
+            0800-222-SALUD (72583) - www.sssalud.gob.ar <br>
+            Copyright 2022 - Toda la información publicada en este sitio es ilustrativa y puede variar sin previo aviso.
+        </p>
+    </footer>
+</body>
+</html>
