@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/icono.PNG" type="image/x-icon">   
-    <script src="https://kit.fontawesome.com/7cff357c59.js" crossorigin="anonymous"></script> 
-
-    <title>HGG- Afiliados</title> <!-- Solapa desarrollada por Gabriela-->
+    
+   <title>HGG- Afiliados</title> <!-- Solapa desarrollada por Gabriela-->
 </head>
 
 <body>
@@ -21,13 +20,9 @@
 
         <nav>
             <ul>
-                <li class="menu">
-                    <a href="index.html" class="dropbtn"><i class="fa-solid fa-house"></i></a>
-                                                    
-                    </li>
 
                 <li class="menu">
-                <a href="Planes.html" class="dropbtn">Planes</a>
+                <a href="./Planes.html" class="dropbtn">Planes</a>
                 <!-- <div class="menu-content">
                     <a href="#">Cobertura</a>
                     <a href="#">Cotización</a>
@@ -37,8 +32,8 @@
                 <li class="menu2">
                 <a href="javascript:void(0)" class="dropbtn">Información</a>
                 <div class="menu2-content">
-                    <a href="#">Cartilla</a>
-                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="./iframes/cartilla.html" target="_blank">Cartilla</a>
+                    <a href="#">Formulario de contacto</a>
                 </div>            
                 </li>
 
@@ -48,7 +43,7 @@
                 </li>
                                 
                 <li class="menu4">
-                <a href="javascript:void(0)" class="dropbtn">Contacto</a>
+                <a href="./nosotros.html" class="dropbtn">Contacto</a>
                 <div class="menu4-content">
                     <a href="./nosotros.html#telefonos">Teléfonos</a>
                     <a href="./nosotros.html#sucursales">Sucursales</a>
@@ -57,7 +52,7 @@
             </ul>
         </nav>
 
-        <div id="app" class="encabezado" v-if="info.password=='9uQFF1Lh'"> <!--Esto es visible para el usuario loggeado-->
+        <div id="app" class="encabezado" v-if="info.password=='9uQFF1Lh'"> <!--Esto es visible para el usuario loggeado Terry-->
             <div class="perfil">
                 <p>Te damos la bienvenida, {{info.firstName}}!<br>
                     Edad: {{info.age}} años <br>
@@ -75,7 +70,7 @@
             </a>
         </div>
         <div class="row">
-            <div class="leftcolumn">
+            <div class="leftcolumn" height="800px">
                 <div class="box">
                     <div class="hide">Servicios Médicos<br>
                     <input type="search" name="search" id="buscar" placeholder="Buscar..." size="10">
@@ -137,6 +132,6 @@
         </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

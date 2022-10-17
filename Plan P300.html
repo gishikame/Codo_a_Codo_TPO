@@ -7,73 +7,45 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="/iframes/estilo.css">
     <link rel="shortcut icon" href="./images/icono.PNG" type="image/x-icon">
-
-   <!-- <script>
-    function openForm() {
-          document.getElementById("myForm").style.display = "block";
-        }
-        
-    function closeForm() {
-          document.getElementById("myForm").style.display = "none";
-        }
-
-    function toggle_visibility(id) {
-     var e = document.getElementById(id);
-     if (e.style.display == 'block') {
-    e.style.display = 'none'
-     } else {
-    document.querySelectorAll('.item').forEach(function(div) {
-       div.style.display = 'none';
-    })
-    e.style.display = 'block';
-    }
-    }
-              
-    </script> -->
     
     <title>HGG- Plan P300</title>
 </head>
 
 <body>
-    <header>
+    <header id="up"> <!--Este es para el ancla de volver para arriba en celulares-->
         <div class="business">
-            <img src="./images/logo2.png" alt="logo-HGG" class="logo">
+            <a href="./index.html"> <!--El logo es el link a Home-->
+                <img src="./images/logo.png" alt="logo-HGG" class="logo"> 
+            </a>
         </div>
 
         <nav>
             <ul>
                 <li class="menu">
-                <a href="./Planes.html" class="dropbtn">Planes</a>
-                <div class="menu-content">
-                    <a href="#">Cobertura</a>
-                    <a href="#">Cotización</a>
-                </div>            
-                </li>
-
-                <li class="menu2">
-                <a href="javascript:void(0)" class="dropbtn">Información</a>
-                <div class="menu2-content">
-                    <a href="#">Cartilla</a>
-                    <a href="#">Preguntas Frecuentes</a>
-                </div>            
-                </li>
-
-                <li class="menu3">
-                <a href="#" class="dropbtn">Afiliados <img src="./images/lock.PNG" alt="block" width="15px" class="inline"></a> 
-                <div class="menu3-content">
-                    <a href="#">Turnos</a>
-                    <a href="#">Estudios Médicos</a>
-                </div>
-                           
-                </li>
-                                
-                <li class="menu4">
-                <a href="javascript:void(0)" class="dropbtn">Contacto</a>
-                <div class="menu4-content">
-                    <a href="#">Teléfonos</a>
-                    <a href="#">Sucursales</a>
-                </div>
-                </li>
+                    <a href="./Planes.html" class="dropbtn">Planes</a>
+     
+                    </li>
+    
+                    <li class="menu2">
+                    <a href="javascript:void(0)" class="dropbtn">Información</a>
+                    <div class="menu2-content">
+                        <a href="./iframes/cartilla.html" target="_blank">Cartilla</a>
+                        <a href="#">Formulario de contacto</a>
+                    </div>            
+                    </li>
+    
+                    <li class="menu3">
+                    <a href="./afiliados.html" class="dropbtn">Afiliados <img src="./images/lock.PNG" alt="block" width="15px" class="inline"></a> 
+                                               
+                    </li>
+                                    
+                    <li class="menu4">
+                    <a href="./nosotros.html" class="dropbtn">Contacto</a>
+                    <div class="menu4-content">
+                        <a href="./nosotros.html#telefonos">Teléfonos</a>
+                        <a href="./nosotros.html#sucursales">Sucursales</a>
+                    </div>
+                    </li>
             </ul>
 
             <div class="user">

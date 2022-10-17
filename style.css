@@ -220,7 +220,7 @@ iconos de color naranja #ff8725
   /*ESTILO DEL MAIN*/
   /* Se crearon 2 columnas de anchos diferentes para poner menu y contenido */
   /* Columna izquierda */
-  .leftcolumn {   
+  .leftcolumn {
     float: left;
     width: 20%;
     background-image: url("./images/fondo.PNG");
@@ -512,7 +512,7 @@ iconos de color naranja #ff8725
   .goup, .goup img {display: none;}
   /* Crear 2 columnas de anchos diferentes */
   /* Columna izquierda */
-  .leftcolumn {   
+  .leftcolumn { 
   float: left;
   width: 20%;
   background-image: url("./images/fondo.PNG");
@@ -620,13 +620,13 @@ header{background-color: #c4dfe2;
 
   /*Logo con entrada animada*/
 
-  .business{
+  .business a{
     display: flex;
     justify-content: space-evenly;
   }
 
   .logo{text-align: center;
-    width: 40%;
+    width: 50%;
     animation: bounceIn;
     animation-duration: 3s;                           
   } 
@@ -833,6 +833,13 @@ background-color: #3b717d;
 
 
 }
+
+@media screen and (max-width: 249px){
+  *{display: none;}
+}
+
+
+
 /* Agregado por Gustavo */
 .alineoplanes{
   float: none;
