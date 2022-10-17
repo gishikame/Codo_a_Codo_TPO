@@ -1,5 +1,7 @@
 # Codo_a_Codo_TPO
 #� �C�o�d�o�_�a�_�C�o�d�o�_�T�P�O�
+---------------V54-Gabi----------------------------
+Se elimina icono de Home de la barra navegador, se mejora el consumo de JSON
 ---------------V4-Gabi----------------------------
 Se linkean los dos HMTLs de afiliados.html y de nosotros.html con el index.html
 ---------------V3-Gabi----------------------------
