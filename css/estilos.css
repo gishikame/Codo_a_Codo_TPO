@@ -3,7 +3,7 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans';
 	background: #E5E5E5;
 }
 
@@ -163,8 +163,6 @@ main {
 	border: 2px solid #bb2929;
 }
 
-
-/* ----- -----  Mediaqueries ----- ----- */
 @media screen and (max-width: 800px) {
 	.formulario {
 		grid-template-columns: 1fr;
