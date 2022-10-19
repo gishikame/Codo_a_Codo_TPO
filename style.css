@@ -16,12 +16,10 @@
 /*
 ESTILO DEL HTML
 Fuente y colores
-
 font-family: 'Open Sans'
 Colores a utilizar
 rgba(112, 184, 189,0.4) para la barra de menú
 rgba(112, 184, 189,1) para el relleno 
-
 iconos de color naranja #ff8725
 */
 
@@ -34,7 +32,6 @@ iconos de color naranja #ff8725
   ESTILO DEL HEADER
   Barra de navegador con opciones Planes, Información,
   Afiliados y Contacto. Cada uno contiene un submenú
-
   */
   header{background-color: #c4dfe2;  
       height: 160px;
