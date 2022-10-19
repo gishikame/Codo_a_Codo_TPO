@@ -220,12 +220,16 @@ iconos de color naranja #ff8725
   /*ESTILO DEL MAIN*/
   /* Se crearon 2 columnas de anchos diferentes para poner menu y contenido */
   /* Columna izquierda */
+  .row{min-height: 800px;
+  overflow: hidden;}
+
   .leftcolumn {
     float: left;
     width: 20%;
     background-image: url("./images/fondo.PNG");
     background-repeat: repeat;
-    height: 800px;
+    min-height:  800px;
+
   }
 
   /* Columna derecha */
@@ -233,8 +237,13 @@ iconos de color naranja #ff8725
     float: left;
     width: 80%;
     background-color: #f5f8f7;
-    padding-left: 20px;
-    height: 100%;
+    padding-left: 0px;
+    min-height: 800px;
+  }
+
+  #height_right{
+    display: flex;
+    flex-direction: column;
   }
 
   /* columnas del home */

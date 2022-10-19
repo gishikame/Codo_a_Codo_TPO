@@ -9,14 +9,11 @@
 </head>
 <body>
     <h1>Mis Estudios</h1>
-    <label for="Paciente">Apellido y Nombre: </label>
+    <div id="app">
+        <select name="Paciente">
+            <option value="Paciente" id="app">{{info.firstName}} {{info.lastName}} (Grupo Familiar)</option>
+        </select>
 
-    <select name="Paciente">
-        <option value="Paciente">Lopez, Alicia (Madre)</option>
-        <option value="Paciente">Flores, Esteban (Padre)</option>
-        <option value="Paciente">Flores, Valeria (hija)</option>
-        <option value="Paciente">Flores, Valentín (hijo)</option>
-    </select>
     <input type="submit" value="Seleccionar" />
     <div>
   
@@ -76,7 +73,7 @@
 
     </div>
 
-
-
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>

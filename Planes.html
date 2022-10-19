@@ -28,6 +28,9 @@
     e.style.display = 'block';
     }
     }
+    function unable(){
+    return(alert("Este botón no funciona aún en esta versión"))
+    }
               
     </script> 
     
@@ -46,11 +49,7 @@
             <ul>
   
                 <li class="menu">
-                <a href="./Planes.html" class="dropbtn">Planes</a>
-                <!-- <div class="menu-content">
-                    <a href="#">Cobertura</a>
-                    <a href="#">Cotización</a>
-                </div>  -->           
+                <a href="./Planes.html" class="dropbtn">Planes</a>     
                 </li>
 
                 <li class="menu2">
@@ -68,10 +67,6 @@
                                 
                 <li class="menu4">
                 <a href="./nosotros.html" class="dropbtn">Contacto</a>
-                <div class="menu4-content">
-                    <a href="./nosotros.html#telefonos">Teléfonos</a>
-                    <a href="./nosotros.html#sucursales">Sucursales</a>
-                </div>
                 </li>
             </ul>
 
@@ -90,7 +85,7 @@
 
                     <input type="submit" class="btn" value="Ingresar">
                     <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
-                    <input type="button" value="Registrarme">
+                    <input type="button" value="Registrarme" onclick="unable()">
 
                     </form>
             </div>

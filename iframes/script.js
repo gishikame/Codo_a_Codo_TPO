@@ -1,15 +1,24 @@
+//Este es el JS para los menúes que se encuentran dentro de la solapa
+//Afiliados:
 //Llamo a Vue para mostrar los datos del Afiliado
 const app = new Vue ({
   el: '#app',
   data:{
-    info:{}
+    info:[],
   },
   created(){
       fetch('https://dummyjson.com/users')
         .then(response => response.json())
         .then(data => {
-          this.info=data.users[0]; //Agarro sólo un usuario
+          //Agarro sólo un usuario al azar  dentro de la lista JSON
+          let max= parseInt(Object.keys(data.users).length);
+          let u= Math.floor(Math.random() * (max) );
+          this.info=data.users[u]; 
           console.log(this.info)
+          //Acá guardamos en la memoria local de los datos del usuario que levanté
+          localStorage.clear();
+          localStorage.setItem('Usuario', info['lastName']+" "+info['firstName'] );
+          //Esto no me funciona, me muestra diferentes usuarios a la vez D:
         })
         .catch(error=> console.log(error));
 
@@ -62,7 +71,7 @@ function save() {
     document.getElementById("datos").innerHTML=cad  
 }
 
-/*Quise usar el v-model pero no me anduvo
+/*Quise usar el v-model pero no me anduvo, despues entendi que lo guarda en el DOM virtual...
   <div> <img :src="person.image" :alt="person.firstName"></div>
         <label for="nombre">Nombre: </label>
         <input name="nombre" id="nombre" type="text" v-model="name" required> 
