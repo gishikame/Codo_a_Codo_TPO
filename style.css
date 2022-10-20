@@ -13,6 +13,9 @@
     transform: scale(1);
   }
 }
+*{
+  margin: 0;   
+}
 /*
 ESTILO DEL HTML
 Fuente y colores
