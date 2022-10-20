@@ -1,0 +1,50 @@
+*{
+    margin: 0;   
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: repeat(3);
+}
+
+main{
+    background-color: white;
+}
+
+header{
+    height: auto;
+}
+
+header, footer{
+    grid-column: 1/3;
+    
+}
+
+.imghome{
+    width: 75%;
+}
+
+.adds{
+    width: 70%;
+}
+
+aside{
+    text-align: center;
+}
+
+@media all and (max-width: 600px){
+    aside, main{
+        grid-column: 1/3;
+    }
+    .grid-container{
+        grid-template-rows: repeat(5);
+    }
+
+    .imghome{
+        width: auto;
+    }
+
+    .adds{
+        width: 30%;     
+    }
+}
