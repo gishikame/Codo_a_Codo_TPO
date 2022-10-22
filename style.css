@@ -283,6 +283,13 @@ iconos de color naranja #ff8725
   .box{
     margin-top: 20px;
   }
+  .hide{
+    display: inline-block;
+  }
+
+  .center{
+    margin-top: 10%;
+  }
 
   .info_btn{
           display: flex;
@@ -571,7 +578,16 @@ iconos de color naranja #ff8725
   }
 
   .box{
-  margin-top: 20px;
+  margin-top: 5%;
+  }
+
+  .hide{
+    display: inline-block;
+    min-height: fit-content;
+  }
+
+  .center{
+    margin-top: 25%;
   }
 
   .info_btn{
@@ -614,7 +630,7 @@ iconos de color naranja #ff8725
 }
 
 /*Responsive para Celular*/
-@media screen and (min-width: 250px) and (max-width: 569px){
+@media screen and (min-width: 250px) and (max-width: 568px){
 header{background-color: #c4dfe2;  
       height: 100%;
       width: 100%;

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./images/icono.PNG" type="image/x-icon">   
-    
-   <title>HGG- Afiliados</title> <!-- Solapa desarrollada por Gabriela-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/icono.PNG" type="image/x-icon">
+
+    <title>HGG- Afiliados</title> <!-- Solapa desarrollada por Gabriela-->
 </head>
 
 <body>
-    <header id="up"> <!--Este es para el ancla de volver para arriba en celulares-->
+    <header id="up">
+        <!--Este es para el ancla de volver para arriba en celulares-->
         <div class="business">
             <a href="./index.html">
-               <img src="./images/logo.png" alt="logo-HGG" class="logo"> 
+                <img src="./images/logo.png" alt="logo-HGG" class="logo">
             </a>
         </div>
 
@@ -22,29 +24,31 @@
             <ul>
 
                 <li class="menu">
-                <a href="./Planes.html" class="dropbtn">Planes</a>  
+                    <a href="./Planes.html" class="dropbtn">Planes</a>
                 </li>
 
                 <li class="menu2">
-                <a href="javascript:void(0)" class="dropbtn">Información</a>
-                <div class="menu2-content">
-                    <a href="./iframes/cartilla.html" target="_blank">Cartilla</a>
-                    <a href="./contact.html">Formulario de contacto</a>
-                </div>            
+                    <a href="javascript:void(0)" class="dropbtn">Información</a>
+                    <div class="menu2-content">
+                        <a href="./iframes/cartilla.html" target="_blank">Cartilla</a>
+                        <a href="./contact.html">Formulario de contacto</a>
+                    </div>
                 </li>
 
                 <li class="menu3">
-                <a href="./afiliados.html" class="dropbtn">Afiliados <img src="./images/lock.PNG" alt="block" width="15px" class="inline"></a> 
-                                           
+                    <a href="./afiliados.html" class="dropbtn">Afiliados <img src="./images/lock.PNG" alt="block"
+                            width="15px" class="inline"></a>
+
                 </li>
-                                
+
                 <li class="menu4">
-                <a href="./nosotros.html" class="dropbtn">Contacto</a>
+                    <a href="./nosotros.html" class="dropbtn">Contacto</a>
                 </li>
             </ul>
         </nav>
 
-        <div id="app" class="encabezado" v-if="info.password=='9uQFF1Lh'"> <!--Esto es visible para el usuario loggeado Terry-->
+        <div id="app" class="encabezado" v-if="info.password=='9uQFF1Lh'">
+            <!--Esto es visible para el usuario loggeado Terry-->
             <div class="perfil">
                 <p>Te damos la bienvenida, {{info.firstName}}!<br>
                     Edad: {{info.age}} años <br>
@@ -54,8 +58,8 @@
             </div>
         </div>
     </header>
-    
-    <main >
+
+    <main>
         <div class="goup">
             <a href="#up">
                 <img src="./iframes/imag/download.PNG" alt="Subir" class="subir">
@@ -64,13 +68,15 @@
         <div class="row">
             <div class="leftcolumn" height="800px">
                 <div class="box">
-                    <div class="hide">Servicios Médicos<br>
-                    <input type="search" name="search" id="buscar" placeholder="Buscar..." size="10">
-                    <button onclick="unable()">Buscar</button>
+                    <div class="hide">
+                        <div>Servicios Médicos<br>
+                            <input type="search" name="search" id="buscar" placeholder="Buscar..." size="10">
+                            <button onclick="unable()">Buscar</button>
+                        </div>
                     </div>
                     <nav>
                         <ul class="center">
-                            <li class="user_menu" >
+                            <li class="user_menu">
                                 <a href=# onclick="toggle_visibility('datos')" class="me"> Mis datos</a>
                             </li>
 
@@ -88,37 +94,41 @@
                         </ul>
 
                     </nav>
-                    
+
                 </div>
-            <div class="box">
-                <div class="info_btn"> <!-- Accesos rapidos-->
-                    <a href="./iframes/data/factura.png" download="" class="fixed"><img src="./images/ico1.png" alt="factura" width="60px"></a>
-                    <a href="./iframes/data/credencial.jpg" download="" class="fixed"><img src="./images/ico2.png" alt="credencial" width="58px"></a>
-                    <a href="#contacto" class="fixed"><img src="./images/ico3.png" alt="contacto" width="60px"></a>
+                <div class="box">
+                    <div class="info_btn">
+                        <!-- Accesos rapidos-->
+                        <a href="./iframes/data/factura.png" download="" class="fixed"><img src="./images/ico1.png"
+                                alt="factura" width="60px"></a>
+                        <a href="./iframes/data/credencial.jpg" download="" class="fixed"><img src="./images/ico2.png"
+                                alt="credencial" width="58px"></a>
+                        <a href="#contacto" class="fixed"><img src="./images/ico3.png" alt="contacto" width="60px"></a>
+                    </div>
                 </div>
-            </div>
-    
 
 
+
             </div>
-                 
+
             <div class="rightcolumn">
-            
-                <iframe src="./iframes/perfil.html" id="datos"class="item"></iframe>
-                
+
+                <iframe src="./iframes/perfil.html" id="datos" class="item"></iframe>
+
                 <iframe src="./iframes/turnos.html" id="turnos" class="item"></iframe>
 
                 <iframe src="./iframes/estudios.html" id="estudios" class="item"></iframe>
 
                 <iframe src="./iframes/cartilla.html" id="cartilla" class="item"></iframe>
-                                                           
+
             </div>
         </div>
     </main>
 
     <footer>
         <p>
-            Superintendencia de Servicios de Salud - Organo de Control de Obras Sociales y Entidades de Medicina Prepaga <br>
+            Superintendencia de Servicios de Salud - Organo de Control de Obras Sociales y Entidades de Medicina Prepaga
+            <br>
             0800-222-SALUD (72583) - www.sssalud.gob.ar <br>
             Copyright 2022 - Toda la información publicada en este sitio es ilustrativa y puede variar sin previo aviso.
         </p>
@@ -126,4 +136,5 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
